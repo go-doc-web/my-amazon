@@ -1,4 +1,11 @@
-/* common */
+/* ================== common =====================*/
+
+:root {
+  --bg-color: #e3e6e6;
+  --color-text-primery: #0f1111;
+  --accent-color: #e67a00;
+  --contrast-color: #000000;
+}
 
 html,
 body {
@@ -8,6 +15,34 @@ body {
 body {
   min-width: 320px;
   font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--color-text-primery);
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a,
+i {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.dropdown-menu,
+.btn {
+  border-radius: 0;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .wrapper {
@@ -18,4 +53,60 @@ body {
 
 main.main {
   flex: 1 1 auto;
+}
+
+/*============== Header ======================== */
+
+.header-top {
+  padding: 4px 0;
+}
+
+.header-top-phone {
+  gap: 8px;
+  cursor: pointer;
+}
+
+.header-top-phone:hover > .phone-link,
+.header-top-phone:hover > i {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.social-icons-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--contrast-color);
+  color: var(--accent-color);
+}
+
+.header-top .btn {
+  height: 28px;
+  background-color: #fff;
+  color: var(--color-text-primery);
+}
+
+.btn-group:not(:last-child) {
+  margin-right: 8px;
 }
